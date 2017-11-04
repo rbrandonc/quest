@@ -8,7 +8,7 @@ module.exports = {
 
   //POST API
   addQuest: (req, res) => {
-    var query = "INSERT INTO quests (user_id,category,description,cost,long,lat,expiration) VALUES (req.userid.user_id,req.body.category,req.body.description,req.body.cost,req.body.long,req.body.lat,req.body.expiration)";
+    var query = "INSERT INTO quests (user_id,category,description,cost,long,lat,expiration) VALUES (req.body.user_id,req.body.category,req.body.description,req.body.cost,req.body.long,req.body.lat,req.body.expiration)";
     db.query (res, query);
   },
 
