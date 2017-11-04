@@ -24,10 +24,10 @@ app.use(function (req, res, next) {
 
 //Initiallising connection string
 var dbConfig = {
-    user:  "<dbUserName>",
-    password: "<dbPassword>",
-    server: "<dbHost_URL>",
-    database: "<dbName>"
+    user:  "root",
+    password: "hacknc2017",
+    server: "127.0.0.1",
+    database: "f"
 };
 
 //Function to connect to database and execute query

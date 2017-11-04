@@ -20,10 +20,10 @@ var server = app.listen(process.env.PORT || 8080, function () {
 });
 //Initiallising connection string
 var dbConfig = {
-    user: "<dbUserName>",
-    password: "<dbPassword>",
-    server: "<dbHost_URL>",
-    database: "<dbName>"
+    user: "root",
+    password: "hacknc2017",
+    server: "127.0.0.1",
+    database: "f"
 };
 //Function to connect to database and execute query
 var executeQuery = function (res, query) {
