@@ -1,25 +1,26 @@
-drop table if exists users cascade;
+-- drop table if exists users;
 create table users (
   id    int   not null auto_increment,
   lname text  not null,
   fname text  not null,
   email text  not null,
-  rating number not null,
-  last4 number not null,
+  rating int not null,
+  lastfour int not null,
   hash text not null,
   primary key (id)
 );
 
-drop table if exists reviews cascade;
+-- drop table if exists reviews;
 create table reviews (
-  user_id: int,
-  review: text,
-  foreign key (user_id) references users(id)
+  userid int not null,
+  review text not null,
+  foreign key (userid) references users(id)
 );
 
-drop table if exists quests cascade;
+drop table if exists quests;
 create table quests (
-  user_id int not null auto_increment,
+  id int not null auto_increment,
+  user_id int not null,
   category text not null,
   descriptions text not null,
   cost number not null,
