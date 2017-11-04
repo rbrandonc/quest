@@ -20,7 +20,7 @@ coverage/
 dist/
 fetch-app/node_modules
 fetch-server/node_modules/
-fetch-server/build
+fetch-server/build/
 tmp/
 temp/
 hooks/

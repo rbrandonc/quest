@@ -9,6 +9,7 @@
     "mssql": "^ 3.3.0",
     "mysql": "^2.15.0",
     "node-mysql": "^0.4.2",
+    "require-sql": "^1.0.0",
     "typescript": "^2.6.1"
   },
   "scripts": {
