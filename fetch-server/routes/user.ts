@@ -20,5 +20,17 @@ module.exports = {
   deleteUser: (req, res) => {
   var query = "DELETE FROM user WHERE Id=" + req.params.id;
   executeQuery (res, query);
+  },
+
+  login: (req, res) => {
+    //CODE
+  },
+
+  signup: (req, res) => {
+    //CODE
+  },
+
+  addReview: (req, res) => {
+    //CODE
   }
 }
