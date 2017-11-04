@@ -8,7 +8,7 @@ module.exports = {
 
   //POST API
   updateUser: (req, res) => {
-    var query = "INSERT INTO user (Name,Email,Password,Rating,Reviews) VALUES (req.body.Name,req.body.Email,req.body.Password,req.body.Rating,req.body.Reviews)";
+    var query = "INSERT INTO user (FName, LName,Email,Password,Rating,Last4) VALUES (req.body.FName,req.body.LName,req.body.Email,req.body.Password,req.body.Rating,req.body.Last4)";
     db.query (res, query);
   },
 
