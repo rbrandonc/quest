@@ -4,15 +4,19 @@
   "description": "HackNC2017",
   "main": "server.js",
   "dependencies": {
-    "express": "^4.14.0",
     "body-parser": "^1.15.2",
-    "mssql": "^ 3.3.0"
+    "express": "^4.14.0",
+    "mssql": "^ 3.3.0",
+    "typescript": "^2.6.1"
   },
   "scripts": {
-    "start": "node server.js"
+    "start": "tsc --watch && node build/server.js"
   },
   "author": {
     "name": "Team Badass",
     "email": ""
+  },
+  "devDependencies": {
+    "@types/node": "^8.0.47"
   }
 }
