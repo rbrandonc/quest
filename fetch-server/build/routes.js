@@ -5,6 +5,8 @@ var request = require('./routes/request.js');
 var router = express.Router();
 //add endpoints here
 router.route('/status').get(stat.getStatus);
+<<<<<<< HEAD
+=======
 router.route('/user').get(user.getUser);
 router.route('/user').post(user.updateUser);
 router.route('/user').put(user.createUser);
@@ -18,6 +20,7 @@ router.route('/request').put(request.createRequest);
 router.route('/request').delete(request.deleteRequest);
 router.route('/request/fulfill').post(request.fulfill);
 router.route('/request/getActive').get(request.getActive);
+>>>>>>> 1b64be2c409820459f77cfaa4c591112fd048cbd
 // router.route('/user').get(user.getUser);
 module.exports = router;
 //# sourceMappingURL=routes.js.map
