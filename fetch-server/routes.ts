@@ -7,9 +7,9 @@ var router = express.Router();
 //add endpoints here
 router.route('/status').get(stat.getStatus);
 router.route('/user').get(user.getUser);
-router.route('/user').get(user.updateUser);
-router.route('/user').get(user.createUser);
-router.route('/user').get(user.deleteUser);
+router.route('/user').post(user.updateUser);
+router.route('/user').put(user.createUser);
+router.route('/user').delete(user.deleteUser);
 // router.route('/user').get(user.getUser);
 
 module.exports = router;
