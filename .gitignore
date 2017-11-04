@@ -18,9 +18,9 @@ npm-debug.log*
 .versions/
 coverage/
 dist/
-./fetch-app/node_modules/
-./fetch-server/node_modules
-./fetch-server/build/
+fetch-app/node_modules
+fetch-server/node_modules/
+fetch-server/build
 tmp/
 temp/
 hooks/
