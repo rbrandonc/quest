@@ -6,7 +6,7 @@ module.exports = {
     },
     //POST API
     updateUser: (req, res) => {
-        var query = "INSERT INTO user (Name,Email,Password,Rating,Reviews) VALUES (req.body.Name,req.body.Email,req.body.Password,req.body.Rating,req.body.Reviews)";
+        var query = "INSERT INTO user (lname,fname,email,rating,last4,hash) VALUES (req.body.lname,req.body.fname,req.body.email,req.body.rating,req.body.last4,req.body.hash)";
         db.query(res, query);
     },
     //PUT API
