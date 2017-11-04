@@ -10,7 +10,7 @@
     "typescript": "^2.6.1"
   },
   "scripts": {
-    "start": "tsc --watch && node build/server.js"
+    "start": "tsc && node build/server.js"
   },
   "author": {
     "name": "Team Badass",

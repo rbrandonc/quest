@@ -31,7 +31,7 @@ var dbConfig = {
 };
 
 //Function to connect to database and execute query
-var  executeQuery = function(res, query){
+var executeQuery = function(res, query){
 	sql.connect(dbConfig, function (err) {
 		if (err) {
 			console.log("Error while connecting database :- " + err);
@@ -54,5 +54,5 @@ var  executeQuery = function(res, query){
 	});
 }
 
-var routes = require('./routes');
+var routes = require('./routes.js');
 app.use('/api', routes);

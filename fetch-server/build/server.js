@@ -48,6 +48,6 @@ var executeQuery = function (res, query) {
         }
     });
 };
-var routes = require('./routes');
+var routes = require('./routes.js');
 app.use('/api', routes);
 //# sourceMappingURL=server.js.map
