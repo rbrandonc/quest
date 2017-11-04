@@ -21,4 +21,8 @@ module.exports = {
   //   var query = "DELETE FROM [user] WHERE Id=" + req.params.id;
   //   executeQuery (res, query);
   // })
+  getUser: (req, res) => {
+    var query = "select * from user";
+    executeQuery (res, query);
+  }
 }
