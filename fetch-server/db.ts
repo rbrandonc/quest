@@ -10,14 +10,14 @@ var connection = mysql.createConnection({
 module.exports = {
   //Function to connect to database and execute query
   query: function(res, query){
-    connection.connect();
+    // connection.connect();
 
     connection.query(query, function (error, results, fields) {
       if (error) throw error;
 
-      res.send(results);
+      if(res.send) res.send(results);
     });
 
-    connection.end();
+    // connection.end();
   }
 }
