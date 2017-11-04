@@ -4,7 +4,7 @@ module.exports = {
         executeQuery(res, query);
     },
     //POST API
-    updateRequet: (req, res) => {
+    addRequest: (req, res) => {
         var query = "INSERT INTO user (userid,text,category,cost,location,expiration) VALUES (req.userid.Name,req.body.text,req.body.category,req.body.cost,req.body.location,req.body.expiration)";
         executeQuery(res, query);
     },
@@ -20,9 +20,11 @@ module.exports = {
     },
     fulfill: (req, res) => {
         //CODE
+        res.send("Fulfilled!");
     },
     getActive: (req, res) => {
         //CODE
+        res.send("Got active!");
     }
 };
 //# sourceMappingURL=request.js.map

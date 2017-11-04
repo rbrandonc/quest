@@ -20,12 +20,15 @@ module.exports = {
     },
     login: (req, res) => {
         //CODE
+        res.send("Logged in!");
     },
     signup: (req, res) => {
         //CODE
+        res.send("Signed up!");
     },
     addReview: (req, res) => {
         //CODE
+        res.send("Added review!");
     }
 };
 //# sourceMappingURL=user.js.map

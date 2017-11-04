@@ -16,7 +16,6 @@ router.route('/request').get(request.getRequest);
 router.route('/request').post(request.addRequest);
 router.route('/request').put(request.createRequest);
 router.route('/request').delete(request.deleteRequest);
-router.route('/request').post(request.addRequest);
 router.route('/request/fulfill').post(request.fulfill);
 router.route('/request/getActive').get(request.getActive);
 // router.route('/user').get(user.getUser);

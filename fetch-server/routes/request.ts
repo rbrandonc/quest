@@ -5,7 +5,7 @@ module.exports = {
   },
 
   //POST API
-  updateRequet: (req, res) => {
+  addRequest: (req, res) => {
     var query = "INSERT INTO user (userid,text,category,cost,location,expiration) VALUES (req.userid.Name,req.body.text,req.body.category,req.body.cost,req.body.location,req.body.expiration)";
     executeQuery (res, query);
   },
