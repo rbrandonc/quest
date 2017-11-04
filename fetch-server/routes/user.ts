@@ -20,8 +20,8 @@ module.exports = {
 
   //DELETE API
   deleteUser: (req, res) => {
-  var query = "DELETE FROM user WHERE Id=" + req.params.id;
-  db.query (res, query);
+    var query = "DELETE FROM user WHERE Id=" + req.params.id;
+    db.query (res, query);
   },
 
   login: (req, res) => {

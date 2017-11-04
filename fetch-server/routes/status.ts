@@ -5,6 +5,6 @@ module.exports = {
     console.log('/status')
     var query = "select 1;";
     db.query(res, query);
-    // res.send('Server Online!');
+    //res.send('Server Online!');
   }
 }
