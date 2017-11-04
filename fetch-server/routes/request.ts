@@ -24,9 +24,11 @@ module.exports = {
 
   fulfill: (req, res) => {
     //CODE
+    res.send("Fulfilled!");
   },
 
   getActive: (req, res) => {
     //CODE
+    res.send("Got active!");
   }
 }
