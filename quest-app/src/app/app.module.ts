@@ -10,23 +10,27 @@ import { AuthService } from '../services/auth.service';
 import { MyApp } from './app.component';
 import { LoginPage } from '../pages/login/login';
 import { HomePage } from '../pages/home/home';
+import { SignUp } from '../pages/signup/signup';
 
 
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    SignUp
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp)
+
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
     HomePage,
-    LoginPage
+    LoginPage,
+    SignUp
   ],
   providers: [
     StatusBar,

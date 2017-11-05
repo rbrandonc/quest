@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
 import { NavController, App } from 'ionic-angular';
 import { HomePage } from '../home/home';
+import { SignUp } from '../pages/signup/signup';
 
 import Auth0Lock from 'auth0-lock';
 
@@ -30,7 +31,7 @@ export class LoginPage {
           return;
         }
 
-        nav.push(HomePage);
+        nav.push(SignUp, {profile});
         lock.hide();
 
         localStorage.setItem('accessToken', authResult.accessToken);

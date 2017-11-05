@@ -1,0 +1,51 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Quest
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <!-- a card with your picture and name, plus a logout button -->
+  <div>
+    <form [formGroup]="form" (ngSubmit)="save(myForm.value, myForm.valid)">
+        <ion-list>
+
+          <ion-item>
+            <ion-label fixed>First Name</ion-label>
+            <ion-input type="text" value="" formControlName="first"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label fixed>Last Name</ion-label>
+            <ion-input type="text" value="" formControlName="last"></ion-input>
+          </ion-item>
+
+          <!-- <ion-item>
+            <ion-label fixed>Card Number</ion-label>
+            <ion-input type="number"></ion-input>
+          </ion-item>
+
+          <ion-item>
+            <ion-label fixed>DOB</ion-label>
+            <ion-input type="number"></ion-input>
+          </ion-item> -->
+
+        </ion-list>
+        <button ion-button block color="primary" type="submit">Submit</button>
+
+    </form>
+  </div>
+  <!-- <div>
+    <ion-card>
+      <img [src]="auth.user.picture" />
+      <ion-card-content>
+        <ion-card-title>{{ auth.user.name }}</ion-card-title>
+      </ion-card-content>
+    </ion-card>
+    <button ion-button block color="primary" (click)="auth.logout()">Logout</button>
+  </div> -->
+
+</ion-content>
