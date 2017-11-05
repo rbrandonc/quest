@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "noImplicitAny": false,
+        "outDir": "build",
+        "rootDir": ".",
+        "sourceMap": true
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
