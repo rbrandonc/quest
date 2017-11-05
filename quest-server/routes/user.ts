@@ -8,14 +8,14 @@ module.exports = {
 
   //POST API
   updateUser: (req, res) => {
-    var query = "UPDATE users SET lname=?,fname=?,email=?,rating=?,last4=?,hash=? WHERE uid=?" ;
-    db.query (res, query, [req.body.lname, req.body.fname, req.body.email, req.body.rating, req.body.last4, req.body.hash, req.body.uid]);
+    var query = "UPDATE users SET lname=?,fname=?,email=?,rating=?,last4=? WHERE uid=?" ;
+    db.query (res, query, [req.body.lname, req.body.fname, req.body.email, req.body.rating, req.body.last4, req.body.uid]);
   },
 
   //PUT API
   createUser: (req, res) => {
-    var query = "INSERT INTO users (lname,fname,email,rating,last4,hash) VALUES (?,?,?,?,?,?)";
-    db.query (res, query, [req.body.lname, req.body.fname, req.body.email, req.body.rating, req.body.last4, req.body.hash]);
+    var query = "INSERT INTO users (lname,fname,email,rating,last4) VALUES (?,?,?,?,?,?)";
+    db.query (res, query, [req.body.lname, req.body.fname, req.body.email, req.body.rating, req.body.last4]);
   },
 
   //DELETE API
