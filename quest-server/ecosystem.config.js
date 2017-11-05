@@ -1,7 +1,7 @@
 module.exports = {
   apps: [{
     name: 'quest',
-    script: './quest-server/build/server.js'
+    script: './build/server.js'
   }],
   deploy: {
     production: {
@@ -10,8 +10,8 @@ module.exports = {
       key: '~/Downloads/quest.pem',
       ref: 'origin/master',
       repo: 'git@github.com:rbrandonc/quest.git',
-      path: '/home/ubuntu/quest',
-      'post-deploy': 'npm install && pm2 startOrRestart ecosystem.config.js'
+      path: '/home/ubuntu/quest/quest-sever/',
+      'post-deploy': 'ls && npm install && pm2 startOrRestart ecosystem.config.js'
     }
   }
 }
