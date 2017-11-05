@@ -3,6 +3,7 @@ var stat = require('./routes/status.js');
 var user = require('./routes/user.js');
 var quest = require('./routes/quest.js');
 var chat = require('./routes/chat.js');
+var transaction = require('./routes/transaction.js');
 
 var router = express.Router();
 
@@ -20,5 +21,8 @@ router.route('/quest').delete(quest.deleteQuest);
 router.route('/quest/getQuests').get(quest.getQuests);
 router.route('/chat').get(chat.getChat);
 router.route('/chat').put(chat.createChat);
+router.route('/transaction').get(transaction.getTransactions);
+router.route('/transaction/payTo').post(transaction.payTo);
+router.route('/transaction/takeFrom').post(transaction.takeFrom);
 
 module.exports = router;
