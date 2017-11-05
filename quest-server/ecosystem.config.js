@@ -11,7 +11,7 @@ module.exports = {
       ref: 'origin/master',
       repo: 'git@github.com:rbrandonc/quest.git',
       path: '/home/ubuntu/quest/quest-server/',
-      'post-deploy': 'ls && npm install && pm2 startOrRestart ecosystem.config.js'
+      'post-deploy': 'cd quest-server/ && ls && npm install && pm2 startOrRestart ecosystem.config.js'
     }
   }
 }
