@@ -19,15 +19,33 @@ create table reviews (
 drop table if exists quests cascade;
 create table quests (
   id int not null auto_increment,
-  uid int not null,
+  uid1 int not null,
+  uid2 int default null,
   category text not null,
-  descriptions text not null,
+  description text not null,
   cost int not null,
   longitude int not null,
   latitude int not null,
   expiration datetime not null,
+  active boolean default true,
   primary key (id),
-  foreign key (uid) references users(id)
+  foreign key (uid1) references users(id);
+);
+
+drop table if exists chats cascade;
+create table chats (
+  sender int not null,
+  qid int not null,
+  message text not null,
+  timestamp datetime default current_timestamp,
+  foreign key (qid) references quests(id)
+);
+
+drop table if exists transations cascade;
+create table transactions (
+  amount int not null,
+  qid int not null,
+  foreign key (qid) references quests(id)
 );
 
 -- test data

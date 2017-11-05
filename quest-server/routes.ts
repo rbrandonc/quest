@@ -3,6 +3,7 @@ var stat = require('./routes/status.js');
 var user = require('./routes/user.js');
 var quest = require('./routes/quest.js');
 var chat = require('./routes/chat.js');
+var transaction = require('./routes/transaction.js');
 
 var router = express.Router();
 
@@ -12,18 +13,16 @@ router.route('/user').get(user.getUser);
 router.route('/user').post(user.updateUser);
 router.route('/user').put(user.createUser);
 router.route('/user').delete(user.deleteUser);
-router.route('/user/login').post(user.login);
-router.route('/user/signup').put(user.signup);
-router.route('/user/addReview').post(user.addReview);
+router.route('/user/addReview').put(user.addReview);
 router.route('/quest').get(quest.getQuest);
-router.route('/quest').post(quest.addQuest);
+router.route('/quest').post(quest.editQuest);
 router.route('/quest').put(quest.createQuest);
 router.route('/quest').delete(quest.deleteQuest);
-router.route('/quest/fulfill').post(quest.fulfill);
-router.route('/quest/getActive').get(quest.getActive);
+router.route('/quest/getQuests').get(quest.getQuests);
 router.route('/chat').get(chat.getChat);
-router.route('/chat').post(chat.postChat);
 router.route('/chat').put(chat.createChat);
-router.route('/chat').delete(chat.deleteChat);
+router.route('/transaction').get(transaction.getTransactions);
+router.route('/transaction/payTo').post(transaction.payTo);
+router.route('/transaction/takeFrom').post(transaction.takeFrom);
 
 module.exports = router;

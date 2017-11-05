@@ -1,24 +1,14 @@
+var db = require('../db');
+
 module.exports = {
   getChat: (req, res) => {
-    //CODE
-    res.send("Got chat!");
-  },
-
-  //POST API
-  postChat: (req, res) => {
-    //CODE
-    res.send("Posted message!");
+    var query = "SELECT * FROM chats WHERE chats.qid=?";
+    db.query (res, query, [req.body.qid]);
   },
 
   //PUT API
   createChat: (req, res) => {
-    //CODE
-    res.send("Created chat!");
-  },
-
-  //DELETE API
-  deleteChat: (req, res) => {
-    //CODE
-    res.send("Deleted chat!");
+    var query = "INSERT INTO users (sender,message,qid) VALUES (?,?,?)";
+    db.query (res, query, [req.body.sender, req.body.message, req.body.qid]);
   }
 }
