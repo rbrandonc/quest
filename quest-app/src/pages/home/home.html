@@ -9,12 +9,12 @@
 <ion-content padding>
 
   <!-- just a login button if not authenticated -->
-  <div *ngIf="!auth.isAuthenticated()">
+  <!-- <div *ngIf="!auth.isAuthenticated()">
     <button ion-button block color="primary" (click)="auth.showLock()">Login</button>
-  </div>
+  </div> -->
 
   <!-- a card with your picture and name, plus a logout button -->
-  <div *ngIf="auth.isAuthenticated()">
+  <!-- <div *ngIf="auth.isAuthenticated()">
     <ion-card>
       <img [src]="auth.user.picture" />
       <ion-card-content>
@@ -22,6 +22,6 @@
       </ion-card-content>
     </ion-card>
     <button ion-button block color="primary" (click)="auth.logout()">Logout</button>
-  </div>
+  </div> -->
 
 </ion-content>

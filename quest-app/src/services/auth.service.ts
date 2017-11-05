@@ -6,28 +6,6 @@ import { HomePage } from '../pages/home/home';
 
 import Auth0Lock from 'auth0-lock';
 
-// Initializing our Auth0Lock
-var lock = new Auth0Lock(
-  'p96Rz_HaBJmxSg1HeMCFwFdpjOvKbLiZ',
-  'quests.auth0.com'
-);
-
-// Listening for the authenticated event
-lock.on("authenticated", function(authResult) {
-  // Use the token in authResult to getUserInfo() and save it to localStorage
-  lock.getUserInfo(authResult.accessToken, function(error, profile) {
-    if (error) {
-      return;
-    }
-    
-    this.nav = this.AuthService.app.getActiveNav();
-    this.nav.push(HomePage);
-
-    localStorage.setItem('accessToken', authResult.accessToken);
-    localStorage.setItem('profile', JSON.stringify(profile));
-  });
-});
-
 @Injectable()
 export class AuthService {
   accessToken: string;
@@ -35,11 +13,12 @@ export class AuthService {
   user: any;
   nav: NavController;
   constructor(public zone: NgZone, private app: App) {
+    this.nav = this.app.getActiveNav();
     this.user = this.getStorageVariable('profile');
     this.idToken = this.getStorageVariable('id_token');
   }
 
-  public showLock() {
+  public showLock(lock) {
     lock.show();
   }
 
